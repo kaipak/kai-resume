@@ -1,0 +1,278 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{deedy-resume-openfont}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\namesection{Kai}{Pak}{ \urlstyle{same}\url{https://kaipak.github.io} \\
+\href{mailto:kai@kaipak.org}{kai@kaipak.org} | 503-939-9127
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+    \subsection{Columbia University}
+        \descript{MS in Applied Physics}
+        \location{09/2016 - 05/2018 | New York, NY}
+        School of Engineering and Applied Sciences\\
+        Applied Mathematics and Applied Physics\\
+        Earth and Environmental Sciences\\
+    \sectionsep
+    \subsection{Portland State University}
+        \descript{BS in Physics}
+        \location{06/2009 - 06/2014 | Portland, OR}
+        Honors College \\
+        Dean's List \\
+        Summa Cum Laude
+    \sectionsep
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Github:// \href{https://github.com/kaipak}{\custombold{kaipak}} \\
+LinkedIn://  \href{https://www.linkedin.com/in/kaipak}{\custombold{kaipak}} \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+Numerical Methods \\
+Numercial Methods of PDEs \\
+Methods in Scientific Computing \\
+Big Data Science Analytics Research \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{SKILLS}
+\subsection{Programming Languages}
+Python \textbullet{}   Shell \textbullet{} Puppet \textbullet{}
+Ruby \textbullet{} \LaTeX\ \\ 
+C \textbullet{} C++ \textbullet{} SQL \textbullet{} HTML
+\sectionsep
+
+\subsection{FRAMEWORKS AND APPS} 
+    Puppet Enterprise \textbullet{} Ansible \\
+    Git/GitHub \textbullet{} Jenkins \\
+    Kubernetes \textbullet{} Containers
+\sectionsep
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{Columbia University, Lamont-Doherty Earth Observatory}
+\descript{Data Science and Technology Intern}
+\location{Jan 2018 – Present | Palisades, NY}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+    \item Member of Pangeo Data: an NSF funded project to design, develop, and implement open source and cloud-based Big Data analytics tools and platforms based on Python scientific computing packages for the geosciences.
+    \item Primary contributor to the development, debugging, and gathering of IO performance statistics on cloud platforms including GCP, AWS, Azure, and HPC environments. Wrote customized test and benchmarking suite to identify bugs and performance bottlenecks in Python utilizing a modified Airspeed Velocity (ASV) framework and Pandas reports.
+    \item Identify performance characteristics of a plethora of use cases based on combination of Dask/Xarray, Numpy, and raw read/writes on a variety of storage backends from NetCDF on FUSE mounts, to pre-prod implmentations such as Zarr on Google Cloud Store utilizing GCSFS.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Puppet Labs}
+\descript{System Engineer}
+\location{Apr 2015 – Jan 2017 | Portland, OR}
+\begin{tightemize}
+\item  Worked intimately with Puppet sales team by providing technical and engineering knowledge and expertise, and engaging with clients' engineering teams through collaborative sessions to fully break down and systematize their technical challenges. Subsequently, implemented proof-of-concept systems demonstrating how infrastructure as code, automated testing, and DevOps philosophy, can greatly reduce these issues.
+\item Built automated internal testing pipeline based on Jenkins, vRealize Automation, and Puppet Enterprise for development demo modules for clients. End product allowed rapid deployment and testing of Puppet demo development stack and used for demonstrations to all potential customers.\end{tightemize}
+\sectionsep
+
+\runsubsection{Con-way Enterprise Services}
+\descript{| Senior Linux Site Reliability Engineer \& Technology Consultant}
+\location{Jan 2010 - Mar 2015 | Portland, OR}
+\begin{tightemize}
+\item Designed and modernized VMware based internal cloud consisting of 120 nodes accessing over 10 THz of CPU and 30 TB of memory. Operations streamlining and automation scripts reduced provisioning times from 4-6 weeks to less than a week as well as increasing VM reliability (99.8\% uptime) and performance consistency.
+\item Implemented library of Python code to automate staging, backup, replication, and off-site vaulting of primary datacenter consisting of 5-7000 physical and virtual nodes and several petabytes of data produced each month. Code automated backup infrastructure, completely removing sysadmin intervention and requiring minimal operator oversight. Awarded innovation award by CIO for efforts towards backup automation.
+\end{tightemize}
+\end{minipage}
+\newpage
+
+
+\begin{minipage}[t]{0.33\textwidth}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     MORE SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Skills}
+
+
+\subsection{Platforms and OS}
+    Linux: RHEL, Ubuntu, Debian\\
+    Amazon Web Services \\
+    Google Compute Platform\\
+    VMware vSphere, vRealize\\
+    macOS \textbullet{} Windows Server\\
+\sectionsep
+    
+\subsection{Areas of Expertise}
+    Datacenter Automation\\
+    Cloud Computing (GCP, AWS)\\
+    Server Virtualization\\
+    Linux System Administration\\
+\end{minipage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}[t]{0.66\textwidth}
+
+\section{Research}
+\runsubsection{Columbia University, Lamont-Doherty Earth Observatory}
+\descript{| Research Associate, Ocean and Climate Physics Advisor: Ryan Abernathey}
+\location{Jan 2017 - Present | Palisades, NY}
+\vspace{\topsep} 
+\begin{tightemize}
+    \item Analyze dataset from NASA/JPL mesoscale and submesoscale resolving general circulation model (MITgcm/LLC4320) to characterize dominant length scales of vertical tracer flux throughout the global oceans.
+    \item Develop multiple methods to analyze length scales including implementing Numpy FFT-based spectral analysis, and creating custom Python package (xrsigproc) to apply 2-D convolution kernels to separate large and small scale variations per M. Germano (1991).
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Oregon State University, College of Environmental, Ocean, and Atmospheric Sciences}
+\descript{| NSF Funded Research Associate | Advisor: Andreas Schmittner}
+\location{Summer 2017 | Corvallis, OR}
+\begin{tightemize}
+    \item Modify coarse resolution model (UVic2.9 written in Fortran) to improve mesoscale eddy parameterization agreement with observation and resolving models. Modifications include capturing effects of thickness and isopycnal diffusivities. 
+    \item Instituted modern software development workflows (e.g., moving codebase to GitHub) to more 
+    easily track code changes and bugs and efficiently promote experimental branches into work streams
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Portland State University, Department of Physics}
+\descript{Research Associate | Advisor: Jack Straton}
+\location{Jun 2014 - Jan 2016 | Portland, OR}
+\begin{tightemize}
+    \item Implement Python (Numpy, Scipy) code to model interparticle physics of hydrogen and anti-hydrogen ions in Hylleraas coordinates for utilization in anti-hydrogen experiments with ALPHA group at CERN.
+\end{tightemize}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    Pubs and Presentations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Publications and Presentations}
+\vspace{\topsep}
+\begin{tightemize}
+    \item Optimizing Storage performance for Big Data analytics and $n$-dimensional arrays on clustered cloud and HPC platforms. Paper in progress, expected Summer 2018.
+    \item Characterizing length scales of vertical tracer fluxes in submesoscale resolving global ocean models. Paper in progress, expected Winter2018.
+    \item Producing the Positive Antihydrogen Ion H̄ + via Radiative Attachment, Chris M. Keating, Kai Y. Pak, and Jack C. Straton. Journal of Physics B: Atomic, Molecular and Optical Physics. March 16, 2016.
+    \item Production of Antihydrogen Ions via Radiative Attachment, Chris Keating and Kai Pak. Poster presentation at Portland State University Research Symposium. Portland, Oregon. Apr 2015.
+    \item Symmetry Investigation in Antimatter, Kai Pak. Poster presentation at Sigma Xi Symposium, Willamette
+Chapter. Portland State University. Portland, Oregon. Apr 2015.
+\end{tightemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    Honors and Recognitions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Honors and Recognitions}
+\vspace{\topsep} 
+\begin{tightemize}
+    \item 2018 NSF Graduate Research Fellowship Program (GRFP) Honorable Mention\\
+    \item Portland State University Honors College\\
+    \item Sigma Pi Sigma Physics Honors Society\\
+    \item Phi Kappa Phi Honor Society\\
+\end{tightemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SOCIETIES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Professional Associations}
+\vspace{\topsep} 
+\begin{tightemize}
+    \item Society for Industrial and Applied Mathematics\\
+    \item American Geophysical Union\\
+    \item American Meterological Society\\
+\end{tightemize}
+
+\end{minipage} 
+\end{document}
