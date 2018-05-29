@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.12.3)  29 MAY 2018 16:14
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.12.3)  29 MAY 2018 18:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1045,6 +1045,38 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
+./kaipak-resume-master.tex:215: Too many }'s.
+l.215 ...{Jun. 2014 - Jan. 2016 | Portland, OR}}}}
+                                                  
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+
+./kaipak-resume-master.tex:216: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.216 \descript{Department of Physics}\\
+                                        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./kaipak-resume-master.tex:217: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.217 ...arch Associate | Advisor: Jack Straton}\\
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 Missing character: There is no ̄ in font [fonts/lato/Lato-Lig]/OT:script=latn;language=DFLT;mapping=tex-text;color=2B2B2BFF ;!
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 261.
 [2]
@@ -1063,11 +1095,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 261.
  ) 
 Here is how much of TeX's memory you used:
- 23107 strings out of 493010
- 426798 string characters out of 6134664
+ 23110 strings out of 493010
+ 426912 string characters out of 6134664
  522533 words of memory out of 5000000
- 26896 multiletter control sequences out of 15000+600000
- 532780 words of font info for 69 fonts, out of 8000000 for 9000
+ 26897 multiletter control sequences out of 15000+600000
+ 532796 words of font info for 71 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  52i,5n,118p,10404b,540s stack positions out of 5000i,500n,10000p,200000b,80000s
 
